@@ -75,7 +75,7 @@ a {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     background-color: antiquewhite;
 }
 
@@ -107,9 +107,7 @@ nav a {
 #banner {
     width: 80%;
     height: 40vh;
-    display: flex;
-    justify-content: center;
-    margin: 2% auto;
+    margin: 3% auto;
 }
 
 .bannerPhoto {
@@ -133,8 +131,7 @@ nav a {
 }
 
 .bannerText a {
-    width: 13%;
-    padding: 1%;
+    padding: 2%;
     border: 1px solid white;
 
 }
@@ -144,29 +141,35 @@ nav a {
 #projects {
     width: 100%;
     height: 100%;
-    padding: 4%;
+    margin: 3% auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: space-evenly;
 }
 
 .projectLink {
+    height: 40vh;
+    width: 25vw;
     padding: 2%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    white-space: nowrap;
+    text-align: center;
 }
 
 .projectLink a {
+    
+
     padding: 2%; 
 }
 
 .project {
+    height: 100%;
+    width: 100%;
     margin: 1%;
-    height: 50vh;
-    width: 25vw;
-    background-position: top center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -199,32 +202,39 @@ nav a {
 
 /* Footer Styling */
 
-#contact {
+footer {
     height: 20vh;
     width: 100%;
     background-color: antiquewhite;
     display: flex;
+    justify-content: center;
+}
+
+#contact {
+    width: 40%;
+    display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
     align-items: center;
+    white-space: nowrap;
 }
 
 #contact a {
-    width: 10%;
-    padding: 1%;
+    padding: 3%;
 }
 
 .social {
-    width: 40%;
+    width: 80%;
     height: 20%;
-    margin: 1% 0;
     display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
 }
 
 .fa {
     height: 30px;
     width: 30px;
+    margin: 3%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -251,4 +261,81 @@ nav a {
 .text {
     
     width: 80%;
+}
+
+/* Media Queries */
+
+@media(max-width: 800px) {
+    .bannerText a {
+        padding: 3%;
+    }
+
+    .projectLink {
+        height: 30vh;
+        width: 40vw;
+    }
+
+    .projectLink a {
+        font-size: 1.8rem;
+    }
+}
+
+@media(max-width: 500px) {
+    header {
+        flex-direction: column;
+
+    }
+
+    .title {
+        width: 70%;
+        justify-content: center;
+    }
+
+    h2 {
+        text-align: center;
+        line-height: 1;
+    }
+    
+    nav {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav a {
+        width: 70%;
+    }
+
+    #banner {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 5rem;
+        line-height: 1;
+        width: 80%;
+    }
+
+    .bannerText a {
+        width: 50%;
+    }
+
+    .projectLink {
+        height: 20vh;
+        width: 40vw;
+    }
+
+    .projectLink a {
+        font-size: 1.6rem;
+    }
+
+    #contact {
+        width: 50%
+    }
+
+    #contact a {
+        width: 70%;
+        
+    }
+
 }
